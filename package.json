@@ -1,0 +1,55 @@
+{
+  "name": "vimeo-downloader",
+  "version": "1.0.0",
+  "description": "Download Vimeo embed videos offline",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estorgio/vimeo-downloader.git"
+  },
+  "keywords": [
+    "vimeo",
+    "downloader"
+  ],
+  "author": "Fortunato Estorgio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/estorgio/vimeo-downloader/issues"
+  },
+  "homepage": "https://github.com/estorgio/vimeo-downloader#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,css,less,ejs,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "combined-stream": "^1.0.8",
+    "dotenv": "^8.1.0",
+    "progress": "^2.0.3",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "stream-buffers": "^3.0.2"
+  }
+}
