@@ -4,7 +4,8 @@
   "description": "Download Vimeo embed videos offline",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "bulk": "node bulk.js"
   },
   "repository": {
     "type": "git",
